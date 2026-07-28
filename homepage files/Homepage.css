@@ -1,0 +1,103 @@
+:root
+{
+  --black : #000000;
+  --green : #B8FF10;
+  --dimGreen :  #b7ff103d;
+  --darkGrey : #111111;
+  --lightGrey : #757575;
+  --white : white;
+
+  
+}
+
+p, h1, h2 {
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+@font-face {
+  font-family: 'roboto_mono';
+  src: url('homepage files/roboto_mono_family/RobotoMono-Regular.ttf') format('truetype');
+  font-size: auto;
+}
+
+body
+{
+  font-family: 'roboto_mono', monospace;
+  color: var(--lightGrey);
+  margin: 0%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--darkGrey);
+  
+  display: flex;
+  flex-direction: column;
+}
+
+#topBar
+{
+  margin-top: 0px;
+  position:fixed;
+  height: 60px;
+  width: 100vw;
+  background-color: var(--black);
+  border-bottom: 2px solid var(--dimGreen);
+}
+
+#bg-logo
+{
+  margin-top: 60px;
+  background-color: var(--dimGreen);
+  width : 100%;
+  height : 60vh;
+}
+
+.highlight-green
+{
+  color: var(--green);
+}
+
+.highlight-white
+{
+  color: var(--white)
+}
+
+#textBlock
+{
+  background-color: var(--black);
+  height : 45vh;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  ".. i1 i2 gb ..";
+}
+
+.inTextBlock
+{
+  background-color: var(--black);
+
+  
+  padding-top: 2rem;
+  padding-right: 2rem;
+  margin: 0%;
+  border : 1px solid rgba(255, 255, 255, 0.075)
+}
+
+
+#infoBox
+{
+  grid-area: i1;
+  font-size: 12pt;
+}
+
+#infoBox2
+{
+  grid-area: i2;
+}
+
+#guideBox
+{
+  grid-area: gb;
+}
