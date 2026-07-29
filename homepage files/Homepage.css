@@ -1,3 +1,9 @@
+*
+{
+  text-rendering: optimizeLegibility;
+  image-rendering: optimizeQuality;
+}
+
 :root
 {
   --black : #000000;
@@ -7,12 +13,18 @@
   --lightGrey : #757575;
   --white : white;
 
-  
+  --topBarTopSpace : 10px;
 }
 
-p, h1, h2 {
+p, h1, h2 
+{
   margin-top: 0;
   line-height: 1.2;
+}
+
+a
+{
+  text-decoration: none;
 }
 
 @font-face {
@@ -27,7 +39,7 @@ body
   color: var(--lightGrey);
   margin: 0%;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: scroll;
   background-color: var(--darkGrey);
   
   display: flex;
@@ -36,12 +48,67 @@ body
 
 #topBar
 {
-  margin-top: 0px;
+  top: 0px;
   position:fixed;
   height: 60px;
   width: 100vw;
   background-color: var(--black);
+
   border-bottom: 2px solid var(--dimGreen);
+  padding-left: 50px;
+  padding-right: 50px;
+
+  z-index: 1000;
+
+  display: grid;
+
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "ll .. b1 b2 b3 b4";
+
+  transition: 0.2s ease-in-out;
+}
+
+#mainLogo
+{
+  height: 50%;
+  grid-area: ll;
+  margin-top: var(--topBarTopSpace);
+
+  align-self: top !important;
+}
+
+#button1
+{
+  grid-area: b1;
+  /* justify-self: right; */
+  /* align-self: top; */
+  margin-top: var(--topBarTopSpace);
+}
+
+#button2
+{
+  grid-area: b2;
+  /* justify-self: right; */
+  /* align-self: top; */
+  margin-top: var(--topBarTopSpace);
+}
+
+#button3
+{
+  grid-area: b3;
+  /* justify-self: right; */
+  /* align-self: top; */
+  margin-top: var(--topBarTopSpace);
+}
+
+#button4
+{
+  grid-area: b4;
+  justify-self: right;
+  align-self: top;
+  margin-top: var(--topBarTopSpace);
 }
 
 #bg-logo
@@ -50,6 +117,9 @@ body
   background-color: var(--dimGreen);
   width : 100%;
   height : 60vh;
+
+  
+  transition: 0.2s ease-in-out;
 }
 
 .highlight-green
@@ -65,31 +135,33 @@ body
 #textBlock
 {
   background-color: var(--black);
-  height : 45vh;
+  height : calc((40vh) - (50px));
 
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: 
   ".. i1 i2 gb ..";
+
+  
+  transition: 0.2s ease-in-out;
 }
 
 .inTextBlock
 {
   background-color: var(--black);
 
+  font-size: 12pt;
   
-  padding-top: 2rem;
-  padding-right: 2rem;
+  padding-top: 6vh;
+  padding-right: 2vw;
   margin: 0%;
-  border : 1px solid rgba(255, 255, 255, 0.075)
+  border : 1px solid rgba(255, 255, 255, 0.075);
 }
-
 
 #infoBox
 {
   grid-area: i1;
-  font-size: 12pt;
 }
 
 #infoBox2
@@ -100,4 +172,14 @@ body
 #guideBox
 {
   grid-area: gb;
+}
+
+#topBar:hover
+{
+  height: 110px;
+}
+
+#topBar:hover ~ #bg-logo
+{
+  margin-top: 110px;
 }
