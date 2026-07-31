@@ -1,0 +1,270 @@
+*, *::before, *::after 
+{
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  image-rendering: optimizeQuality;
+
+  scrollbar-width: none;
+}
+
+:root
+{
+  --black : #000000;
+  --green : #B8FF10;
+  --dimGreen :  #b7ff103d;
+  --darkGrey : #111111;
+  --lightGrey : #757575;
+  --white : white;
+
+  --topBarTopSpace : 10px;
+  --topSpaceAddition : 10px;
+}
+
+p, h1, h2 
+{
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'roboto_mono';
+  src: url('homepage files/roboto_mono_family/RobotoMono-Regular.ttf') format('truetype');
+  font-size: auto;
+}
+
+body
+{
+  font-family: 'roboto_mono', monospace;
+  color: var(--lightGrey);
+  margin: 0%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--darkGrey);
+  
+  display: flex;
+  flex-direction: column;
+
+  scrollbar-width: 100px;
+}
+
+#topBar
+{
+  top: 0px;
+  position:fixed;
+  height: 60px;
+  width: 100vw;
+  background-color: var(--black);
+
+  border-bottom: 2px solid var(--dimGreen);
+  padding-left: 50px;
+  padding-right: 50px;
+
+  z-index: 1000;
+
+  display: grid;
+  align-items: top;
+  justify-content: right;
+
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "ll .. b1 b2 b3 b4";
+
+  transition: 0.2s ease-in-out;
+}
+
+.topBarItems
+{
+  align-self: top;
+  justify-self: right;
+
+  text-align: right;
+  
+  transition: color 0.2s ease-in-out;
+}
+
+/* #topBar:hover .topBarItems:hover .highlight-white:hover .highlight-green:hover */
+/* { */
+  /* color: var(--white); */
+  /* transition: color 0.2s ease-in-out; */
+/* } */
+
+/* #topBar:hover .topBarItems:hover .highlight-white:hover .highlight-green:hover ~ .hiddenTopText */
+/* { */
+  /* color: var(--white); */
+  /* transition: color 0.2s ease-in-out; */
+/* } */
+
+/* #topBar:hover .topBarItems:hover .highlight-white:hover .highlight-green:hover ~ .hiddenMore */
+/* { */
+  /* color: var(--white); */
+  /* transition: color 0.2s ease-in-out; */
+/* } */
+
+.topBarItems:hover .highlight-green,
+#topBar:hover .topBarItems:hover .highlight-white .hiddenTopText {
+  color: var(--white);
+  transition: color 0.1s ease-in-out;
+}
+
+#mainLogo
+{
+  height: auto;
+  width: 250px;
+  aspect-ratio: auto;
+  grid-area: ll;
+  margin-top: calc(var(--topBarTopSpace) + 3px);
+
+  justify-self: left;
+
+}
+
+#button1
+{
+  grid-area: b1;
+  /* justify-self: right; */
+  /* align-self: top; */
+  margin-top: calc(var(--topBarTopSpace) + var(--topSpaceAddition));
+}
+
+#button2
+{
+  grid-area: b2;
+  /* justify-self: right; */
+  /* align-self: top; */
+  margin-top: calc(var(--topBarTopSpace) + var(--topSpaceAddition));
+}
+
+#button3
+{
+  grid-area: b3;
+  /* justify-self: right; */
+  /* align-self: top; */
+  margin-top: calc(var(--topBarTopSpace) + var(--topSpaceAddition));
+}
+
+#button4
+{
+  grid-area: b4;
+  /* justify-self: right; */
+  /* align-self: top; */
+  margin-top: calc(var(--topBarTopSpace) + var(--topSpaceAddition));
+}
+
+.hiddenTopText
+{
+  color: #75757500;
+  /* transition: 0.2s ease-in-out; */
+  transition: color 0.1s ease-in-out;
+}
+
+.hiddenMore
+{
+  color: #75757500;
+  transition: 0.2s ease-in-out;
+  transition: color 0.1s ease-in-out;
+}
+
+#topBar:hover .hiddenTopText
+{
+  color: var(--lightGrey);
+  transition: color 0.3s ease-in-out;
+}
+
+/* #topBar:hover .hiddenTopText:hover */
+/* { */
+  /* color: var(--white); */
+  /* transition: color 0.3s ease-in-out; */
+/* } */
+
+/* #topBar:hover .hiddenTopText:hover ~ .topBarItems */
+/* { */
+  /* color: var(--white); */
+  /* transition: color 0.3s ease-in-out; */
+/* } */
+
+#topBar:hover .hiddenMore
+{
+  color: var(--green);
+  transition: color 0.3s ease-in-out;
+}
+
+#topBar:hover .hiddenMore:hover
+{
+  color: var(--white);
+  transition: color 0.1s ease-in-out;
+}
+
+/* #topBar:hover .hiddenMore:hover  */
+/* { */
+  /* color: var(--white); */
+  /* transition: color 0.1s ease-in-out; */
+/* } */
+
+.highlight-green
+{
+  color: var(--green);
+  transition: color 0.1s ease-in-out;
+}
+
+/* .topBarItems:hover .highlight-green:hover
+{
+  color: var(--white);
+} */
+
+.highlight-white
+{
+  color: var(--white)
+}
+
+#textBlock
+{
+  background-color: var(--black);
+  height : calc((40vh) - (50px));
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  ".. i1 i2 gb ..";
+
+  
+  transition: 0.2s ease-in-out;
+}
+
+.inTextBlock
+{
+  background-color: var(--black);
+
+  font-size: 12pt;
+  
+  padding-top: 6vh;
+  padding-right: 2vw;
+  margin: 0%;
+  border : 1px solid rgba(255, 255, 255, 0.075);
+}
+
+#infoBox
+{
+  grid-area: i1;
+}
+
+#infoBox2
+{
+  grid-area: i2;
+}
+
+#guideBox
+{
+  grid-area: gb;
+}
+
+#topBar:hover
+{
+  height: 110px;
+}
