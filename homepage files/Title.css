@@ -13,6 +13,7 @@
   position: relative;
   
   transition: 0.2s ease-in-out;
+  overflow: hidden;
 }
 
 .circle
