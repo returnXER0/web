@@ -33,7 +33,7 @@ a
 
 @font-face {
   font-family: 'roboto_mono';
-  src: url('homepage files/roboto_mono_family/RobotoMono-Regular.ttf') format('truetype');
+  src: url('/docs/roboto_mono_family/RobotoMono-Regular.ttf') format('truetype');
   font-size: auto;
 }
 
