@@ -8,60 +8,9 @@
   margin-top: 60px;
   background-color: var(--darkGrey);
   width : 100%;
-  height : 60vh;
+  aspect-ratio: 3/1;
 
   position: relative;
   
   transition: 0.2s ease-in-out;
-  overflow: hidden;
-}
-
-.circle
-{
-    /* border-radius: 100%; */
-    position: absolute;
-}
-
-#circle1
-{
-    height: 20vw;
-    aspect-ratio: 1/1;
-    background-color: aqua;
-}
-
-#circle2
-{
-    height: 25vw;
-    aspect-ratio: 1/1;
-    background-color: blue;
-
-    animation: glide;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    animation-timing-function: ease-in-out
-}
-
-#bgLogo
-{
-    background-color: aqua;
-}
-
-#midLogo
-{
-    background-color: bisque;
-}
-
-@keyframes glide
-{
-    0%
-    {
-        left: 60vw;
-        top: 20vh;
-    }
-    100%
-    {
-        left: 20vw;
-        top: 0.1vh;
-    }
 }

@@ -1,0 +1,31 @@
+
+#more 
+{
+    width: 100%; 
+    height: auto;
+    padding: 120px; /* Adjusted side padding so items stay visible */
+    background-color: var(--black);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.moreItem 
+{
+    width: 300px;
+    aspect-ratio: 5/3;
+    padding: 20px;
+    background-color: var(--darkGrey);
+    
+    /* Added display:flex so justify/align actually work */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--dimWhite);
+}

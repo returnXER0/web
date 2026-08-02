@@ -15,6 +15,7 @@
   --darkGrey : #111111;
   --lightGrey : #757575;
   --white : white;
+  --dimWhite : #ffffff23;
 
   --topBarTopSpace : 10px;
   --topSpaceAddition : 10px;
@@ -220,43 +221,6 @@ body
 .highlight-white
 {
   color: var(--white)
-}
-
-#textBlock
-{
-  background-color: var(--black);
-  height : calc((40vh) - (50px));
-
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: 
-  ".. i1 i2 gb ..";
-
-  
-  transition: 0.2s ease-in-out;
-}
-
-.inTextBlock
-{
-  background-color: var(--black);
-
-  font-size: 12pt;
-  
-  padding-top: 6vh;
-  padding-right: 2vw;
-  margin: 0%;
-  border : 1px solid rgba(255, 255, 255, 0.075);
-}
-
-#infoBox
-{
-  grid-area: i1;
-}
-
-#infoBox2
-{
-  grid-area: i2;
 }
 
 #guideBox
