@@ -1,0 +1,19 @@
+#mainContainer
+{
+    display: flex;
+    flex-direction: row;
+}
+
+#leftSec
+{
+    background-color: var(--dimGreen);
+    width: 66.7vw;
+    height: 100vh;
+}
+
+#rightSec
+{
+    background-color: var(--lightGrey);
+    width: 33.3vw;
+    height: 100vh;
+}

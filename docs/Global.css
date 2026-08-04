@@ -1,0 +1,40 @@
+*, *::before, *::after 
+{
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  image-rendering: optimizeQuality;
+
+  scrollbar-width: none;
+}
+
+:root
+{
+  --black : #000000;
+  --green : #B8FF10;
+  --dimGreen :  #b7ff103d;
+  --darkGrey : #111111;
+  --lightGrey : #757575;
+  --white : white;
+  --dimWhite : #ffffff23;
+  --dimmerWhite : #ffffff2a;
+
+  --topBarTopSpace : 10px;
+  --topSpaceAddition : 10px;
+}
+
+p, h1, h2 
+{
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'roboto_mono';
+  src: url('roboto_mono_family/RobotoMono-Regular.ttf') format('truetype');
+  font-size: auto;
+}
