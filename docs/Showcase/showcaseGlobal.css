@@ -7,27 +7,34 @@
 #bottomBar
 {
     position: absolute;
-    bottom: 60px;
-    justify-self: center;
-
-    background-color: var(--black);
-    border: 1px solid;
-    border-color: var(--green);
-    height: 10px;
-    width: 20vw;
-
-    transition: 0.3s ease-in-out;
-}
-
-#bottomBar:hover
-{
-    position: absolute;
-    bottom: 60px;
+    bottom: 40px;
     justify-self: center;
 
     background-color: var(--black);
     border: 1px solid;
     border-color: var(--dimGreen);
-    height: 70px;
-    width: 40vw;
+    height: 50px;
+    width: 200px;
+}
+
+#wall
+{
+    height: 100%;
+    width: 100%;
+
+    position : relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.case
+{
+    background-color: var(--black);
+    width: 800px;
+    height: 400px;
+
+    /* position: absolute; */
+    align-self: center;
+    justify-self: center;
 }
