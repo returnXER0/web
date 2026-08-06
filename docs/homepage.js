@@ -62,7 +62,7 @@ window.addEventListener("load", function () {
         setTimeout(() => {
             loader.style.display = "none";
             content.style.display = "block";
-        }, 6000); // Loader duration (2 seconds)
+        }, 6000);
 
         
     }
