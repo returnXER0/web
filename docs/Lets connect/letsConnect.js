@@ -6,6 +6,7 @@ flatpickr("#date", {
     enableTime: true,
     dateFormat: "d F Y, h:i K",
     minDate: "today",
+    inline: true,
     time_24hr: false
 });
 

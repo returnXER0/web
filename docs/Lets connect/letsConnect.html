@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Document</title>
+    <script src="../navbar.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <link rel="stylesheet" href="../Global.css">
     <link rel="stylesheet" href="letsConnectGlobal.css">
     <link rel="stylesheet" href="../topBar.css">
-    <script src="../navbar.js"></script>
 </head>
 <body>
     <rx-navbar>
@@ -236,18 +236,6 @@
             rows="6"
         ></textarea>
     </div>
-
-    <!-- Submit -->
-    <button type="submit">
-        Let's Connect
-    </button>
-
-</form>
-
-        </div>
-        <div id="rightSec">
-            <label for="date">Preferred Date & Time</label>
-
         <input
         type="text"
             id="date"
@@ -256,7 +244,15 @@
             readonly
             required
         >
+    <!-- Submit -->
+    <button type="submit">
+        Let's Connect
+    </button>
+
+</form>
+
         </div>
+        <div id="rightSec"></div>
     </div>
 
 
