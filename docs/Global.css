@@ -5,6 +5,8 @@
   image-rendering: optimizeQuality;
 
   scrollbar-width: none;
+
+  font-size: 12pt;
 }
 
 :root
@@ -13,6 +15,7 @@
   --green : #B8FF10;
   --dimGreen :  #b7ff103d;
   --darkGrey : #111111;
+  --grey5 : #1a1a1a;
   --lightGrey : #757575;
   --white : white;
   --dimWhite : #ffffff23;

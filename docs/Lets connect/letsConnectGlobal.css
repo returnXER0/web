@@ -6,28 +6,22 @@
 
 #leftSec
 {
-    background-color: var(--dimGreen);
-    width: 66.7vw;
+    background-color: var(--darkGrey);
+    width: 75vw;
     height: 100vh;
 }
 
 #rightSec
-{   background-color: var(--lightGrey);
-    width: 33.3vw;
+{   background-color: var(--grey5);
+    width: 25vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#connect-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-#date{
+
+/* #date{
     width: 30%;
     height: 10px;
     padding: 10px;
@@ -37,4 +31,65 @@
     right: 0;
     top: 50%;
     z-index: 5;
+} */
+
+#leftSecForm
+{
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "lH rH";
+
+    padding-top: 60px;
+}
+
+#leftHalf
+{
+    grid-area: lH;
+    border: 1px solid var(--dimWhite);
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: top;
+}
+
+.leftHalfItems
+{
+    position: relative;
+}
+
+#rightHalf
+{
+    grid-area: rH;
+    border: 1px solid var(--dimWhite);
+}
+
+label
+{
+    color: var(--white);
+}
+
+input,select
+{
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid var(--dimWhite);
+}
+
+::placeholder,::option
+{
+    color: var(--dimWhite);
+}
+
+::-webkit-input-placeholder
+{
+    color: var(--dimWhite);
 }
