@@ -3,12 +3,12 @@ class NavBar extends HTMLElement {
         this.innerHTML = `
               <div id="topBar">
             <div id="mainLogo" class="topBarItems">
-                <a href="../index.html">
-                    <img src="../topBar-logo.svg" alt="returnXER0">
+                <a href="/index.html">
+                    <img src="/topBar-logo.svg" alt="returnXER0">
                 </a>
             </div>
             <div id="button1" class="topBarItems">
-                <a href="../Lets connect/letsConnect.html">
+                <a href="/Lets connect/letsConnect.html">
                     <p class="highlight-white">
                         <span class="highlight-green">Lets connect</span><br>
                         <span class="hiddenTopText">tell us what's<br>in your mind</span>
@@ -17,7 +17,7 @@ class NavBar extends HTMLElement {
                 </a>
             </div>
             <div id="button2" class="topBarItems">
-                <a href="../Showcase/showcase.html">
+                <a href="/Showcase/showcase.html">
                     <p class="highlight-white">
                         <span class="highlight-green">Showcase</span><br>
                         <span class="hiddenTopText">see what exactly<br>we can do</span>
@@ -25,7 +25,7 @@ class NavBar extends HTMLElement {
                 </a>
             </div>
             <div id="button3" class="topBarItems">
-                <a href="../Showcase/showcase.html">
+                <a href="/Showcase/showcase.html">
                     <p class="highlight-white">
                         <span class="highlight-green">Team</span><br>
                         <span class="hiddenTopText">get to know<br>more about us</span>
@@ -35,8 +35,8 @@ class NavBar extends HTMLElement {
             <div id="button4" class="topBarItems">                
                 <p class="highlight-white">
                     <span class="highlight-green">ooo</span><br>
-                    <a href="../Showcase/showcase.html"><span class="hiddenMore">Pricing</span></a><br>
-                    <a href="/showcase"><span class="hiddenMore">Articles</span></a><br>
+                    <a href="/Showcase/showcase.html"><span class="hiddenMore">Pricing</span></a><br>
+                    <a href="/Showcase/showcase.html"><span class="hiddenMore">Articles</span></a><br>
                 </p>            
             </div>
         </div>

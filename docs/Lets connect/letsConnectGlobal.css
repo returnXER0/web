@@ -91,10 +91,10 @@ textarea:focus {
 
 label
 {
-    color: var(--white);
+    color: var(--lightGrey);
 }
 
-#name:not(:focus):not(:placeholder-shown) {
+input:not(:focus):not(:placeholder-shown) {
     color: var(--green);        /* Beautiful emerald green text */
     border-color: var(--dimWhite); 
     transition: 0.5s;
@@ -148,4 +148,45 @@ option
 ::-webkit-input-placeholder
 {
     color: var(--dimWhite);
+}
+
+/* Fix: Add the leading dot and override default styles */
+.flatpickr-calendar 
+{
+    width: 100%;
+
+    background: var(--grey5);
+    border-radius: 12px;
+    border: 1px solid #313244;
+}
+
+/* Ensure the header and month background match */
+.flatpickr-months,
+.flatpickr-month,
+.flatpickr-current-month,
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+  background: transparent;
+  fill: var(--lightGrey); /* Changes the arrow icon colors */
+  color: #cdd6f4 !important;
+}
+
+.dayContainer
+{
+    width: 100%;
+}
+
+/* Ensure the weekday header bar background matches */
+.flatpickr-weekdays,
+span.flatpickr-weekday 
+{
+
+  background: transparent;
+  color: #a6adc8 !important;
+}
+
+/* Ensure the days container matches */
+.flatpickr-days,
+.dayContainer {
+  background: transparent;
 }

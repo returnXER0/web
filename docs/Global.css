@@ -36,8 +36,16 @@ a
   text-decoration: none;
 }
 
+::selection
+{
+    color: var(--green);
+    background-color: var(--dimGreen);
+}
+
+
 @font-face {
   font-family: 'roboto_mono';
   src: url('roboto_mono_family/RobotoMono-Regular.ttf') format('truetype');
   font-size: auto;
 }
+
