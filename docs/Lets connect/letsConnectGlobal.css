@@ -180,34 +180,52 @@ option
   outline: none;
 }
 
-/* Fix for browser autofill background and text color */
+/* ---------------------------------------------------
+   1. AUTOFILL BLURRED (Deselected but filled)
+   Behavior: Text remains Green, Bottom Border goes Dim White
+--------------------------------------------------- */
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active,
+input:-webkit-autofill:hover,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  /* Use an inset box-shadow to cover the white background */
+select:-webkit-autofill:hover {
+  /* Hides the default white background */
   -webkit-box-shadow: 0 0 0px 1000px var(--darkGrey) inset !important;
   
-  /* Change the text color (standard 'color' won't work here) */
-  -webkit-text-fill-color: var(--white) !important;
+  /* Text is considered "typed", so it stays Green */
+  -webkit-text-fill-color: var(--green) !important;
   
-  /* Keep your sharp corners and borders */
-  border: 1px solid var(--grey5) !important;
+  /* Clear all borders, then apply only the bottom one */
+  border: none !important;
+  border-bottom: 1px solid var(--dimWhite) !important;
+  
+  /* Keep your sharp corners */
   border-radius: 0 !important;
   
-  /* Optional: Smooth transition just in case */
+  /* Prevents background color flashing */
   transition: background-color 5000s ease-in-out 0s;
 }
 
-/* If you want the autofill border to glow green on focus just like normal */
-input:-webkit-autofill:focus {
-  border-color: var(--green) !important;
+/* ---------------------------------------------------
+   2. AUTOFILL FOCUSED (User clicks on the autofilled field)
+   Behavior: Bottom Border goes White, Text stays Green
+--------------------------------------------------- */
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+  /* Maintain the dark background */
+  -webkit-box-shadow: 0 0 0px 1000px var(--darkGrey) inset !important;
+  
+  /* Text remains Green */
+  -webkit-text-fill-color: var(--green) !important;
+  
+  /* Clear all borders, then apply solid White to the bottom */
+  border: none !important;
+  border-bottom: 1px solid var(--white) !important;
 }
 
 /* 1. Main calendar container & width */
@@ -236,6 +254,12 @@ input:-webkit-autofill:focus {
   outline: none !important;
   appearance: none !important;
   -webkit-appearance: none !important;
+  
+  /* Fix for cropped text at the bottom */
+  height: auto !important;
+  line-height: normal !important;
+  padding-bottom: 2px !important; 
+  vertical-align: middle !important;
 }
 
 /* The actual dropdown list items (kept dark so they are readable) */
