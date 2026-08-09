@@ -78,6 +78,19 @@
 {
     grid-area: rH;
     border: 1px solid var(--dimWhite);
+
+    position: relative;
+
+    padding-left: 10%;
+    padding-right: 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: top;
+
+    
 }
 
 #budget:focus, 
@@ -150,43 +163,235 @@ option
     color: var(--dimWhite);
 }
 
-/* Fix: Add the leading dot and override default styles */
-.flatpickr-calendar 
+#Note
 {
-    width: 100%;
-
-    background: var(--grey5);
-    border-radius: 12px;
-    border: 1px solid #313244;
+    text-align: center;
 }
 
-/* Ensure the header and month background match */
+#date {
+  text-align: center !important;
+  font-size: 24pt;
+  
+  /* Optional: Matching the input field to your dark theme */
+  background: var(--darkGrey);
+  color: var(--green); /* So the selected date is clearly visible */
+  /* border: 1px solid var(--grey5); */
+  padding: 10px;
+  outline: none;
+}
+
+/* Fix for browser autofill background and text color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  /* Use an inset box-shadow to cover the white background */
+  -webkit-box-shadow: 0 0 0px 1000px var(--darkGrey) inset !important;
+  
+  /* Change the text color (standard 'color' won't work here) */
+  -webkit-text-fill-color: var(--white) !important;
+  
+  /* Keep your sharp corners and borders */
+  border: 1px solid var(--grey5) !important;
+  border-radius: 0 !important;
+  
+  /* Optional: Smooth transition just in case */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* If you want the autofill border to glow green on focus just like normal */
+input:-webkit-autofill:focus {
+  border-color: var(--green) !important;
+}
+
+/* 1. Main calendar container & width */
+.flatpickr-calendar {
+  width: 100% !important;
+  background: var(--darkGrey) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--grey5);
+}
+
+/* 2. Header and Month section */
 .flatpickr-months,
 .flatpickr-month,
-.flatpickr-current-month,
+.flatpickr-current-month {
+  background: var(--darkGrey) !important;
+  color: var(--lightGrey) !important;
+}
+
+/* Month Dropdown Styling */
+.flatpickr-monthDropdown-months {
+  background: transparent !important; /* Transparent selected month background */
+  color: var(--lightGrey) !important;
+  border-radius: 0 !important;
+  border: none !important;
+  outline: none !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+/* The actual dropdown list items (kept dark so they are readable) */
+.flatpickr-monthDropdown-months .flatpickr-monthDropdown-month,
+.flatpickr-monthDropdown-months option {
+  background: var(--black) !important;
+  color: var(--lightGrey) !important;
+}
+
+.flatpickr-monthDropdown-months:hover,
+.flatpickr-monthDropdown-months:focus,
+.flatpickr-monthDropdown-months option:hover,
+.flatpickr-monthDropdown-months option:focus {
+  background: var(--dimGreen) !important;
+  color: var(--green) !important;
+}
+
+/* 3. Month & Time Toggle Arrows - Hidden by default, visible on hover */
 .flatpickr-months .flatpickr-prev-month,
-.flatpickr-months .flatpickr-next-month {
-  background: transparent;
-  fill: var(--lightGrey); /* Changes the arrow icon colors */
-  color: #cdd6f4 !important;
+.flatpickr-months .flatpickr-next-month,
+.numInputWrapper span.arrowUp,
+.numInputWrapper span.arrowDown {
+  background: transparent !important;
+  color: var(--lightGrey) !important;
+  fill: var(--lightGrey) !important;
+  opacity: 0 !important; /* Hides arrows initially */
+  transition: opacity 0.2s ease-in-out !important;
 }
 
-.dayContainer
-{
-    width: 100%;
+/* Show arrows when hovering their respective zones */
+.flatpickr-months:hover .flatpickr-prev-month,
+.flatpickr-months:hover .flatpickr-next-month,
+.numInputWrapper:hover span.arrowUp,
+.numInputWrapper:hover span.arrowDown {
+  opacity: 1 !important; /* Makes them visible on hover */
 }
 
-/* Ensure the weekday header bar background matches */
+/* Arrow SVG styling */
+.flatpickr-months .flatpickr-prev-month svg,
+.flatpickr-months .flatpickr-next-month svg,
+.flatpickr-months .flatpickr-prev-month svg path,
+.flatpickr-months .flatpickr-next-month svg path,
+.numInputWrapper span svg,
+.numInputWrapper span svg path {
+  fill: var(--lightGrey) !important;
+  stroke: var(--lightGrey) !important;
+  color: var(--lightGrey) !important;
+}
+
+/* Time input CSS border triangles */
+.numInputWrapper span.arrowUp::after {
+  border-bottom-color: var(--lightGrey) !important;
+}
+
+.numInputWrapper span.arrowDown::after {
+  border-top-color: var(--lightGrey) !important;
+}
+
+/* Arrow hover effects */
+.flatpickr-months .flatpickr-prev-month:hover svg,
+.flatpickr-months .flatpickr-next-month:hover svg,
+.flatpickr-months .flatpickr-prev-month:hover svg path,
+.flatpickr-months .flatpickr-next-month:hover svg path,
+.numInputWrapper span:hover::after {
+  fill: var(--green) !important;
+  stroke: var(--green) !important;
+  border-bottom-color: var(--green) !important;
+  border-top-color: var(--green) !important;
+}
+
+/* 4. Weekday headers (Mon, Tue, etc.) */
 .flatpickr-weekdays,
-span.flatpickr-weekday 
-{
-
-  background: transparent;
-  color: #a6adc8 !important;
+.flatpickr-weekdaycontainer {
+  width: 100% !important;
+  background: var(--darkGrey) !important;
 }
 
-/* Ensure the days container matches */
+span.flatpickr-weekday {
+  background: var(--darkGrey) !important;
+  color: var(--white) !important;
+  flex: 1 !important;
+  max-width: none !important;
+}
+
+/* 5. Day container stretched full-width */
 .flatpickr-days,
 .dayContainer {
-  background: transparent;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  background: var(--darkGrey) !important;
+}
+
+/* 6. Individual day cells */
+.flatpickr-day {
+  color: var(--lightGrey) !important;
+  max-width: none !important;
+  flex-basis: 14.28% !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  border-radius: 0 !important; /* Strict sharp corners */
+  border: 1px solid transparent;
+}
+
+/* 7. Day cell interaction states */
+.flatpickr-day:hover {
+  background: var(--dimGreen) !important;
+  border-color: transparent !important;
+}
+
+.flatpickr-day.selected, 
+.flatpickr-day.selected:hover {
+  background: var(--green) !important;
+  color: var(--darkGrey) !important;
+  border-color: var(--green) !important;
+  border-radius: 0 !important; 
+}
+
+.flatpickr-day.today {
+  border-color: var(--green) !important;
+  border-radius: 0 !important; 
+}
+
+.flatpickr-day.flatpickr-disabled,
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+  color: var(--dimWhite) !important;
+  background: transparent !important;
+}
+
+/* 8. Timepicker section */
+.flatpickr-time {
+  background: var(--darkGrey) !important;
+  border-radius: 0 !important;
+  border-top: 1px solid var(--grey5) !important;
+}
+
+.flatpickr-time input,
+.flatpickr-time .flatpickr-time-separator,
+.flatpickr-time .flatpickr-am-pm {
+  color: var(--lightGrey) !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+/* Time selection / focus states */
+.flatpickr-time input:hover,
+.flatpickr-time input:focus,
+.flatpickr-time .flatpickr-am-pm:hover,
+.flatpickr-time .flatpickr-am-pm:focus {
+  background: var(--dimGreen) !important;
+  color: var(--green) !important;
+  outline: none !important;
+}
+
+.flatpickr-time input::selection {
+  background: var(--dimGreen) !important;
+  color: var(--green) !important;
 }
