@@ -52,6 +52,9 @@
 
     position: relative;
 
+    padding-left: 10%;
+    padding-right: 10%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,10 +67,26 @@
     position: relative;
 }
 
+.leftHalfItems input
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
 #rightHalf
 {
     grid-area: rH;
     border: 1px solid var(--dimWhite);
+}
+
+#budget:focus, 
+input:focus, 
+textarea:focus {
+    outline: none;
+    color: var(--green);
+    border-color: var(--white);
+    transition: 0.5s;
 }
 
 label
@@ -75,19 +94,56 @@ label
     color: var(--white);
 }
 
-input,select
+#name:not(:focus):not(:placeholder-shown) {
+    color: var(--green);        /* Beautiful emerald green text */
+    border-color: var(--dimWhite); 
+    transition: 0.5s;
+}
+
+::selection
+{
+    color: var(--green);
+    background-color: var(--dimGreen);
+}
+
+input,select,#budget
 {
     background-color: transparent;
     border-top: none;
     border-right: none;
     border-left: none;
     border-bottom: 1px solid var(--dimWhite);
-}
 
-::placeholder,::option
-{
     color: var(--dimWhite);
 }
+
+.optionText
+{
+    color: aqua;
+}
+
+input::placeholder {
+    color: var(--dimWhite);
+    transition: color 0.3s ease; 
+    justify-self: right;
+}
+
+input:focus::placeholder {
+    color: var(--dimGreen); 
+}
+
+
+/*
+#budget option[value=""] {
+  color: #888888; 
+  background-color: #ffffff;
+}*/
+
+option
+{
+    background-color: var(--lightGrey);
+    color: var(--white);
+} 
 
 ::-webkit-input-placeholder
 {
