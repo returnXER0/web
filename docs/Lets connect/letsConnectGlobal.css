@@ -17,7 +17,9 @@
     right: 0px;
     top: 0px;
 
-    background-color: var(--grey5);
+    background-color: var(--darkGrey);
+    border: 1px solid var(--grey5);
+
     width: 25vw;
     height: 100vh;
     display: flex;
@@ -53,12 +55,12 @@
 #leftHalf
 {
     grid-area: lH;
-    border: 1px solid var(--dimWhite);
+    border: 1px solid var(--grey5);
 
     position: relative;
 
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
 
     display: flex;
     flex-direction: column;
@@ -82,19 +84,18 @@
 #rightHalf
 {
     grid-area: rH;
-    border: 1px solid var(--dimWhite);
+    border: 1px solid var(--grey5);
 
     position: relative;
 
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
     align-items: top;
-
     
 }
 
@@ -204,7 +205,7 @@ select:-webkit-autofill:hover {
   
   /* Clear all borders, then apply only the bottom one */
   border: none !important;
-  border-bottom: 1px solid var(--dimWhite) !important;
+  border-bottom: 1px solid var(--grey5) !important;
   
   /* Keep your sharp corners */
   border-radius: 0 !important;
@@ -224,7 +225,7 @@ textarea:-webkit-autofill:active,
 select:-webkit-autofill:focus,
 select:-webkit-autofill:active {
   /* Maintain the dark background */
-  -webkit-box-shadow: 0 0 0px 1000px var(--darkGrey) inset !important;
+  /* -webkit-box-shadow: 0 0 0px 1000px var(--darkGrey) inset !important; */
   
   /* Text remains Green */
   -webkit-text-fill-color: var(--green) !important;
@@ -238,9 +239,9 @@ select:-webkit-autofill:active {
 .flatpickr-calendar {
   width: 100% !important;
   background: var(--darkGrey) !important;
-  border-radius: 0 !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  border: 1px solid var(--grey5);
+  border-radius: 0% !important;
+  box-shadow: none;
+  border: 1px solid var(--dimWhite);
 }
 
 /* 2. Header and Month section */
@@ -296,7 +297,7 @@ select:-webkit-autofill:active {
 }
 
 /* Show arrows when hovering their respective zones */
-.flatpickr-months:hover .flatpickr-prev-month,
+.flatpickr-months:hover .flatpickr-prev-month, 
 .flatpickr-months:hover .flatpickr-next-month,
 .numInputWrapper:hover span.arrowUp,
 .numInputWrapper:hover span.arrowDown {
@@ -425,23 +426,18 @@ span.flatpickr-weekday {
   background: var(--dimGreen) !important;
   color: var(--green) !important;
 }
-
-
-
 /*-----------------------------------------------------------------------------------------------------------------------------
 */
-
-
 /* below is css of checkmark options */
 
 /* 1. Fieldset Container */
 fieldset {
-  border: 1px solid var(--grey5);
+  border: 1px solid var(--dimWhite);
   border-radius: 0; /* Keeping strict sharp corners */
   padding: 20px 25px;
   margin: 20px 0;
   background: var(--darkGrey);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: none;
 }
 
 /* 2. Legend (Title) */
@@ -522,7 +518,7 @@ fieldset legend {
 /* 8. Accessibility Focus State */
 .services input[type="checkbox"]:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px var(--darkGrey), 0 0 0 4px var(--green);
+  /* box-shadow: 0 0 0 2px var(--darkGrey), 0 0 0 4px var(--green); */
 }
 
 
@@ -537,13 +533,16 @@ fieldset legend {
 textarea.textarea {
   /* Box model */
   width: 100%;
+  height: 120px;
   box-sizing: border-box;
-  padding: 0%;
+  padding: 2%;
+
+  /* align-self: top; */
   
   /* Theme styling */
   background: var(--darkGrey); /* Alternatively, use var(--black) if you want the input to look deeper */
-  color: var(--white);
-  border: 1px solid var(--grey5);
+  color: var(--green);
+  border: 1px solid var(--dimWhite);
   border-radius: 0; /* Sharp corners */
   
   /* Typography & Interaction */
@@ -557,22 +556,22 @@ textarea.textarea {
 
 /* Label Styling */
 label[for="message"] {
-  margin-top: 40px;
+  margin-top: 20px;
   display: block;
   color: var(--lightGrey);
   font-size: 12pt;
   margin-bottom: 10px;
 }
 
-/* Hover state */
+/* Hover state
 textarea.textarea:hover {
   border-color: var(--lightGrey);
-}
+} */
 
 /* Focus state - Highlights with the theme's green */
 textarea.textarea:focus {
-  border-color: var(--dimGreen);
-  background: var(--black); /* Darkens slightly on focus for depth */
+  border-color: var(--white);
+  /* background: var(--black); Darkens slightly on focus for depth */
 }
 
 /* Placeholder styling */
@@ -673,7 +672,7 @@ textarea.textarea::-webkit-scrollbar-thumb:hover {
 /* Focus state */
 .TNS input[type="checkbox"]:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px var(--darkGrey), 0 0 0 4px var(--green);
+  /* box-shadow: 0 0 0 2px var(--darkGrey), 0 0 0 4px var(--green); */
 }
 
 /* 4. Link & Highlight Styling */
@@ -693,4 +692,36 @@ textarea.textarea::-webkit-scrollbar-thumb:hover {
   text-decoration: underline;
   text-decoration-color: var(--green);
   text-underline-offset: 4px;
+}
+
+#submitInfo
+{
+  height: 40px;
+  width: 400px;
+
+  align-self: center;
+
+  background-color: transparent;
+  border: 1px solid var(--green) !important;
+
+  transition: 0.3s;
+}
+
+#submitInfoText
+{
+  color: var(--green);
+
+  transition: 0.3s;
+}
+
+#submitInfo:hover
+{
+  background-color: var(--green);
+  color: var(--darkGrey);
+
+}
+
+#submitInfo:hover #submitInfoText
+{
+  color: var(--darkGrey);
 }
