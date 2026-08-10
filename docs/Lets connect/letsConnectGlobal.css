@@ -12,7 +12,12 @@
 }
 
 #rightSec
-{   background-color: var(--grey5);
+{   
+    position: fixed;
+    right: 0px;
+    top: 0px;
+
+    background-color: var(--grey5);
     width: 25vw;
     height: 100vh;
     display: flex;
@@ -165,7 +170,8 @@ option
 
 #Note
 {
-    text-align: center;
+  color: var(--dimWhite);
+  text-align: center;
 }
 
 #date {
@@ -191,7 +197,7 @@ textarea:-webkit-autofill:hover,
 select:-webkit-autofill,
 select:-webkit-autofill:hover {
   /* Hides the default white background */
-  -webkit-box-shadow: 0 0 0px 1000px var(--darkGrey) inset !important;
+  /* -webkit-box-shadow: 0 0 0px 1000px var(--darkGrey) inset !important; */
   
   /* Text is considered "typed", so it stays Green */
   -webkit-text-fill-color: var(--green) !important;
@@ -418,4 +424,273 @@ span.flatpickr-weekday {
 .flatpickr-time input::selection {
   background: var(--dimGreen) !important;
   color: var(--green) !important;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+/* below is css of checkmark options */
+
+/* 1. Fieldset Container */
+fieldset {
+  border: 1px solid var(--grey5);
+  border-radius: 0; /* Keeping strict sharp corners */
+  padding: 20px 25px;
+  margin: 20px 0;
+  background: var(--darkGrey);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 2. Legend (Title) */
+fieldset legend {
+  color: var(--lightGrey);
+  padding: 0 10px;
+  font-size: 12pt;
+  background: var(--darkGrey); /* Helps cut through the border cleanly */
+}
+
+/* 3. Spacing for each service row */
+.services {
+  margin-bottom: 14px;
+}
+
+.services:last-child {
+  margin-bottom: 0;
+}
+
+/* 4. Label styling & layout */
+.services label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--lightGrey);
+  font-size: 12pt;
+  transition: color 0.2s ease-in-out;
+  user-select: none; /* Prevents text highlighting when clicking rapidly */
+}
+
+/* Label text hover */
+.services label:hover {
+  color: var(--white);
+}
+
+/* 5. Custom Checkbox Base */
+.services input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--lightGrey);
+  border-radius: 0; /* Sharp corners */
+  background-color: transparent;
+  margin-right: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+/* Checkbox Hover State */
+.services input[type="checkbox"]:hover {
+  border-color: var(--green);
+  background-color: var(--dimGreen);
+}
+
+/* 6. Checkbox Checked State */
+.services input[type="checkbox"]:checked {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+
+/* 7. The Checkmark Icon (Drawn using CSS borders) */
+.services input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border: solid var(--darkGrey); /* Dark checkmark against the green background */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  top: 2px; /* Adjusts vertical centering */
+}
+
+/* 8. Accessibility Focus State */
+.services input[type="checkbox"]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--darkGrey), 0 0 0 4px var(--green);
+}
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* Container spacing (assuming this div is part of a larger form stack) */
+textarea.textarea {
+  /* Box model */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0%;
+  
+  /* Theme styling */
+  background: var(--darkGrey); /* Alternatively, use var(--black) if you want the input to look deeper */
+  color: var(--white);
+  border: 1px solid var(--grey5);
+  border-radius: 0; /* Sharp corners */
+  
+  /* Typography & Interaction */
+  font-family: inherit;
+  font-size: 12pt;
+  line-height: 1.5;
+  resize: none; /* Allows user to drag down, but prevents horizontal layout-breaking */
+  outline: none;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Label Styling */
+label[for="message"] {
+  margin-top: 40px;
+  display: block;
+  color: var(--lightGrey);
+  font-size: 12pt;
+  margin-bottom: 10px;
+}
+
+/* Hover state */
+textarea.textarea:hover {
+  border-color: var(--lightGrey);
+}
+
+/* Focus state - Highlights with the theme's green */
+textarea.textarea:focus {
+  border-color: var(--dimGreen);
+  background: var(--black); /* Darkens slightly on focus for depth */
+}
+
+/* Placeholder styling */
+textarea.textarea::placeholder {
+  color: var(--lightGrey);
+  opacity: 0.6; /* Dims the placeholder so it doesn't compete with user input */
+}
+
+/* Custom Scrollbar for the textarea (Webkit browsers like Chrome/Edge/Safari) */
+textarea.textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea.textarea::-webkit-scrollbar-track {
+  background: var(--darkGrey);
+  border-left: 1px solid var(--grey5);
+}
+
+textarea.textarea::-webkit-scrollbar-thumb {
+  background: var(--grey5);
+  border-radius: 0; /* Keeping the blocky theme */
+}
+
+textarea.textarea::-webkit-scrollbar-thumb:hover {
+  background: var(--green);
+}
+
+
+
+
+/* 1. Container Spacing & Centering */
+.TNS {
+  /* margin-top: 25px; */
+  /* margin-bottom: 25px; */
+  text-align: center;
+}
+
+/* 2. Label Layout */
+.TNS label {
+  display: block;
+  text-align: center;
+  color: var(--lightGrey);
+  font-size: 12pt;
+  font-weight: normal; /* Unweighted per brand guide */
+  line-height: 1.6;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.TNS label:hover {
+  color: var(--white);
+}
+
+/* 3. Custom Checkbox Base */
+.TNS input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: -3px; /* Aligns checkbox cleanly with line 1 text */
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--lightGrey); /* Highly visible border */
+  border-radius: 0; /* Sharp corners */
+  background-color: transparent;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+/* Checkbox Hover */
+.TNS input[type="checkbox"]:hover {
+  border-color: var(--green);
+  background-color: var(--dimGreen);
+}
+
+/* Checkbox Checked */
+.TNS input[type="checkbox"]:checked {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+
+/* The Checkmark */
+.TNS input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border: solid var(--darkGrey);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  top: 2px;
+}
+
+/* Focus state */
+.TNS input[type="checkbox"]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--darkGrey), 0 0 0 4px var(--green);
+}
+
+/* 4. Link & Highlight Styling */
+.TNS a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.TNSHighlight {
+  color: var(--green);
+  font-size: 12pt;
+  font-weight: normal; /* Unweighted per brand guide */
+}
+
+/* Hover state for Terms & Condition link */
+.TNS a:hover .TNSHighlight {
+  text-decoration: underline;
+  text-decoration-color: var(--green);
+  text-underline-offset: 4px;
 }
