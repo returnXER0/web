@@ -24,7 +24,7 @@ emailjs.init({
 // Form
 // -------------------------
 
-const form = document.querySelector("#connect-form");
+const form = document.querySelector("#leftSecForm");
 
 form.addEventListener("submit", function (event) {
 
@@ -39,6 +39,8 @@ form.addEventListener("submit", function (event) {
     const budget = document.querySelector("#budget").value;
     const message = document.querySelector("#message").value;
     const date = document.querySelector("#date").value;
+   
+
 
 
     // Get selected services
@@ -51,6 +53,10 @@ form.addEventListener("submit", function (event) {
         .join(", ");
 
 
+     const termsAccepted = document.querySelector("#terms").checked
+    ? "Yes"
+    : "No";
+
     // Data we send to EmailJS
     const templateParams = {
         name: name,
@@ -61,7 +67,8 @@ form.addEventListener("submit", function (event) {
         budget: budget,
         services: services,
         date: date,
-        message: message
+        message: message,
+        termsAccepted: termsAccepted
     };
 
 
