@@ -734,9 +734,9 @@ textarea.textarea::-webkit-scrollbar-thumb:hover {
   background-color: rgba(20, 17, 17, 0.737);
 }
 
-#submitOverlay.show{
+/* #submitOverlay.show{
   
-}
+} */
 
 
 #submitPopup {
