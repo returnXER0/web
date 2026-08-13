@@ -11,6 +11,13 @@ flatpickr("#date", {
 });
 
 
+//-------------------------
+// Overlay
+
+let popup = document.querySelector("#submitPopup");
+let overlay = document.querySelector("#submitOverlay");
+
+
 // -------------------------
 // EmailJS
 // -------------------------
@@ -68,7 +75,7 @@ form.addEventListener("submit", function (event) {
         services: services,
         date: date,
         message: message,
-        termsAccepted: termsAccepted
+        terms_accepted: termsAccepted
     };
 
 
@@ -80,18 +87,17 @@ form.addEventListener("submit", function (event) {
     )
     .then(function () {
 
-        console.log("Email sent successfully!");
-
-        alert("Thanks! We'll get back to you soon.");
+        popup.classList.add("show");
+        overlay.classList.add("show");
 
         form.reset();
 
     })
     .catch(function (error) {
 
-        console.error("Email failed:", error);
+        popup.classList.remove("show");
+        overlay.classList.add("show");
 
-        alert("Something went wrong. Please try again.");
 
     });
 
