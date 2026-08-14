@@ -726,29 +726,5 @@ textarea.textarea::-webkit-scrollbar-thumb:hover {
   color: var(--darkGrey);
 }
 
-/*           OVERLAY            */
-
-#submitOverlay{
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(20, 17, 17, 0.737);
-}
-
-/* #submitOverlay.show{
-  
-} */
 
 
-#submitPopup {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-
-    transition: opacity 0.3s ease;
-}
-
-#submitPopup.show {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}

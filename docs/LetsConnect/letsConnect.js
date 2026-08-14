@@ -16,7 +16,7 @@ flatpickr("#date", {
 
 let popup = document.querySelector("#submitPopup");
 let overlay = document.querySelector("#submitOverlay");
-
+let xbtn = document.querySelector("#xbutton");
 
 // -------------------------
 // EmailJS
@@ -37,12 +37,19 @@ form.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
+//     const termsAccepted = document.querySelector("#terms");
+
+//     if (!termsAccepted.checked) {
+//     // show your error popup
+//    alert("Accept the T&C");
+//     return;
+//     }
+
     // Get normal fields
     const name = document.querySelector("#name").value;
     const phone = document.querySelector("#phone").value;
     const email = document.querySelector("#email").value;
     const organization = document.querySelector("#organization").value;
-    const socialLink = document.querySelector("#social_link").value;
     const budget = document.querySelector("#budget").value;
     const message = document.querySelector("#message").value;
     const date = document.querySelector("#date").value;
@@ -70,7 +77,6 @@ form.addEventListener("submit", function (event) {
         phone: phone,
         email: email,
         organization: organization,
-        social_link: socialLink,
         budget: budget,
         services: services,
         date: date,
@@ -87,18 +93,31 @@ form.addEventListener("submit", function (event) {
     )
     .then(function () {
 
-        popup.classList.add("show");
         overlay.classList.add("show");
+        popup.classList.add("show");
 
         form.reset();
 
     })
     .catch(function (error) {
 
-        popup.classList.remove("show");
-        overlay.classList.add("show");
+        alert("Invalid");
 
 
     });
+
+});
+
+
+xbtn.addEventListener("click", ()=>{
+
+    overlay.classList.remove("show");
+    popup.classList.remove("show");
+
+});
+overlay.addEventListener("click", ()=>{
+       
+    overlay.classList.remove("show");
+    popup.classList.remove("show");       
 
 });

@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="letsConnectGlobal.css">
     <link rel="stylesheet" href="letsConnectFAQSection.css">
     <link rel="stylesheet" href="../topBar.css">
-    <link rel="stylesheet" href="/LetsConnect/letsConnectFAQSection.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRVRJX8ZHP"></script>
     <script>
      window.dataLayer = window.dataLayer || [];
@@ -87,6 +86,19 @@
                             placeholder="Your organization"
                         >
                     </div>
+
+
+                    <!-- 5. Social / Website -->
+                    <div class="leftHalfItems">
+                        <label for="social_link">Social / Website Link <span>(Optional)</span></label>
+                        <input
+                            type="url"
+                            id="social_link"
+                            name="social_link"
+                            placeholder="https://..."
+                        >
+                    </div>
+
 
                     <!-- 6. Budget -->
                     <div class="leftHalfItems">
@@ -252,6 +264,7 @@
                         <label>
                             <input
                                 type="checkbox"
+                                value="Other"
                                 id="terms"
                                 name="terms"
                                 value="Yes"
@@ -289,12 +302,8 @@
 
     </div>
 
-    <div id="submitOverlay"> 
-        <div id="submitPopup">
-            <h3>SUCCCCIIICCESSSSSSS</h3>
-            <div id="xbutton"></div>
-        </div>
-    </div>
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
