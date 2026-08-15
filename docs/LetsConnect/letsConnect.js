@@ -101,7 +101,7 @@ form.addEventListener("submit", function (event) {
     })
     .catch(function (error) {
 
-        alert("Invalid");
+        alert(error);
 
 
     });
