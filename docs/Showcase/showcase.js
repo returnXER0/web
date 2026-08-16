@@ -4,34 +4,34 @@ import { ScrollTrigger } from "https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTr
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to("#layer1", {
-    y: -150,
+    y: -200,
 
     scrollTrigger: {
         trigger: "#MainContainer",
         start: "top top",
-        end: "+=1000",
+        end: "+=2000",
         scrub: true,
         markers: true
     }
 });
 gsap.to("#layer2", {
-    y: -300,
+    y: -350,
 
     scrollTrigger: {
         trigger: "#MainContainer",
         start: "top top",
-        end: "+=1000",
+        end: "+=2000",
         scrub: true,
         markers: true
     }
 });
 gsap.to("#layer3", {
-    y: -500,
+    y: -550,
 
     scrollTrigger: {
         trigger: "#MainContainer",
         start: "top top",
-        end: "+=1000",
+        end: "+=2000",
         scrub: true,
         markers: true
     }
