@@ -11,7 +11,6 @@ gsap.to("#layer1", {
         start: "top top",
         end: "+=2000",
         scrub: true,
-        markers: true
     }
 });
 gsap.to("#layer2", {
@@ -22,7 +21,6 @@ gsap.to("#layer2", {
         start: "top top",
         end: "+=2000",
         scrub: true,
-        markers: true
     }
 });
 gsap.to("#layer3", {
@@ -33,6 +31,5 @@ gsap.to("#layer3", {
         start: "top top",
         end: "+=2000",
         scrub: true,
-        markers: true
     }
 });

@@ -12,22 +12,22 @@
     background-color: pink;
     left: 0%;
     top: 8%;
-    width: 34%;
+    width: 33.3333%;
     height: 3000px;
 }
 
 #layer2 {
     background-color: green;
-    left: 34%;
+    left: 33.3333%;
     top: 8%;
-    width: 34%;
+    width: 33.3333%;
     height: 3150px;
 }
 
 #layer3 {
     background-color: red;
-    left: 68%;
+    left: 66.6666%;
     top: 8%;
-    width: 34%;
+    width: 33.3333%;
     height: 3350px;
 }
