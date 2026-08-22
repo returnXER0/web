@@ -25,9 +25,9 @@ class NavBar extends HTMLElement {
                 </a>
             </div>
             <div id="button3" class="topBarItems">
-                <a href="/Team/">
+                <a href="/About/">
                     <p class="highlight-white">
-                        <span class="highlight-green">Team</span><br>
+                        <span class="highlight-green">About Us</span><br>
                         <span class="hiddenTopText">get to know<br>more about us</span>
                     </p>
                 </a>

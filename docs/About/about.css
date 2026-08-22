@@ -43,3 +43,20 @@
 
     cursor: pointer;
 }
+#prev
+{
+    position: absolute;
+    top: 50%;
+    background-color: chartreuse;
+    left: 10%;
+
+}
+#next 
+{
+
+    position: absolute;
+    top: 50%;
+    background-color: chartreuse;
+    right: 10%;
+
+}
