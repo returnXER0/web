@@ -49,12 +49,12 @@
 // animate();
 window.addEventListener("load", function () {
     const loader = document.getElementById("lp-container");
-    const content = document.getElementById("content");
+    const content = document.getElementById("content"); //none
 
     if (sessionStorage.getItem("loaderShown")) {
         // Skip loader
-        loader.style.display = "none";
-        content.style.display = "block";
+        loader.style.display = "none";    //none
+        content.style.display = "block";  //block
     } else {
         // Show loader once
         sessionStorage.setItem("loaderShown", "true");
