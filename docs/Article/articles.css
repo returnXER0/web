@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a0a0a;
+    color: #f0f0f0;
+    font-family: sans-serif;
+}
+
+#articlesHeader {
+    padding: 60px 8%;
+}
+
+#articlesHeader h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+#articlesHeader p {
+    color: #999;
+    max-width: 600px;
+}
+
+.article-card {
+    margin: 0 8% 24px;
+    padding: 24px;
+    background: #131313;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+}
+
+.article-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.article-card p {
+    color: #999;
+    margin-bottom: 12px;
+}
+
+.meta {
+    color: #B8FF10;
+    font-size: 13px;
+}
