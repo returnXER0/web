@@ -36,7 +36,7 @@ class NavBar extends HTMLElement {
                 <p class="highlight-white">
                     <span class="highlight-green">ooo</span><br>
                     <a href="/showcase/"><span class="hiddenMore">Pricing</span></a><br>
-                    <a href="/Article/"><span class="hiddenMore">Articles</span></a><br>
+                    <a href="/article/"><span class="hiddenMore">Articles</span></a><br>
                 </p>            
             </div>
         </div>
