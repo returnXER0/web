@@ -17,7 +17,7 @@ class NavBar extends HTMLElement {
                 </a>
             </div>
             <div id="button2" class="topBarItems">
-                <a href="/Showcase/">
+                <a href="/showcase/">
                     <p class="highlight-white">
                         <span class="highlight-green">Showcase</span><br>
                         <span class="hiddenTopText">see what exactly<br>we can do</span>
@@ -35,7 +35,7 @@ class NavBar extends HTMLElement {
             <div id="button4" class="topBarItems">                
                 <p class="highlight-white">
                     <span class="highlight-green">ooo</span><br>
-                    <a href="/Showcase/"><span class="hiddenMore">Pricing</span></a><br>
+                    <a href="/showcase/"><span class="hiddenMore">Pricing</span></a><br>
                     <a href="/Article/"><span class="hiddenMore">Articles</span></a><br>
                 </p>            
             </div>
